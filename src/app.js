@@ -26,7 +26,7 @@ document.body.addEventListener('contextmenu', event => {
 
 // Закрытие контекстного меню при клике вне него
 document.body.addEventListener('click', event => {
-  if (contextMenu.isOpen && event.target.offsetParent !== contextMenu.el) {
+  if (event.target.nodeName !== 'LI') {
     contextMenu.close();
   }
 });
